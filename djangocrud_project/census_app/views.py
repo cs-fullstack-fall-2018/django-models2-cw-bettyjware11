@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -23,5 +24,6 @@ def get_random_salary():
 
 
 def index(request):
+    print(respondent.objects.getall())
     return HttpResponse("<h1>Welcome to the Census Application!</h1><h4>" + get_random_name() + "</h4><h4>" + str(
         get_random_age()) + "</h4><h4>" + str(get_random_salary()))
